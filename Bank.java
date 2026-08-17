@@ -1,7 +1,7 @@
 
 public class Bank {
 
-    //these are instanc variables
+    //these are instance variables
     String bankName;
     String userName;
     String accountType;
@@ -48,6 +48,16 @@ public class Bank {
     }
 
     public static void main(String[] args) {
-        Bank bank = new Bank("Bank Of India", "Srusti", "Savings", 1, 1000, 123456789);
+        Scanner sc = new Scanner(System.in);
+        String bankName = sc.nextLine();
+        int userId = sc.nextInt();
+        sc.nextLine();
+        String userName = sc.nextLine();
+        long accountNumber = sc.nextLong();
+        sc.nextLine();
+        String accountType = sc.nextLine();
+        double balance = sc.nextDouble();
+
     }
+
 }
