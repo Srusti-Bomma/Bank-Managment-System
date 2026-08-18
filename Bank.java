@@ -1,4 +1,6 @@
 
+import java.util.Scanner;
+
 public class Bank {
 
     //these are instance variables
@@ -47,6 +49,24 @@ public class Bank {
         return res;
     }
 
+    boolean deposit(double amount) {
+        if (amount > 0) {
+            balance += amount;
+        }
+        return true;
+    }
+
+    boolean withdraw(double amount) {
+        if (amount > 0) {
+            balance -= amount;
+        }
+        return true;
+    }
+
+    double checkBalance() {
+        return balance;
+    }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String bankName = sc.nextLine();
@@ -57,7 +77,6 @@ public class Bank {
         sc.nextLine();
         String accountType = sc.nextLine();
         double balance = sc.nextDouble();
-
     }
 
 }
